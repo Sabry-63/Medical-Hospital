@@ -1,0 +1,41 @@
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+.panel-body {
+  	padding: 15px;
+}
+.panel-heading {
+  	padding: 10px;
+	border-radius: 25px
+}
+.panel-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+	color: inherit;
+	text-decoration: none
+}
+.panel-title > a {
+	color: inherit;
+}
+.panel-footer {
+	padding: 10px 15px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.panel > .list-group {
+	margin-bottom: 0;
+}
+.panel > .table,
+.panel > .table-responsive > .table,
+.panel > .panel-collapse > .table,
+.panel-group .panel {
+	margin-bottom: 0;
+}
+.panel-group {
+	margin-bottom: 20px;
+}
+.panel-group .panel + .panel {
+	margin-top: 15px;
+}

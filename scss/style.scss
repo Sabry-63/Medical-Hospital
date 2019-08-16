@@ -1,0 +1,539 @@
+@import 'mixins/font';
+@import 'var/variables';
+@import 'vendor/panel';
+body {
+	font-family: $main-font;
+	overflow-x: hidden;
+}
+/* --------------------------------------------------------------------
+	Start Global
+-------------------------------------------------------------------- */
+/* Button */
+.btn-primary {
+	background-color: $color-blue;
+	border-color: $color-blue;
+	box-shadow: 0 0 50px rgba(0, 0, 0, .19);
+	&:hover,
+	&:not([disabled]):not(.disabled):active {
+		background-color: $back-blue;
+    		border-color: $back-blue;
+	}
+	&:focus {
+		    box-shadow: 0 0 0 0.2rem rgba($back-blue, .5);
+	}
+}
+.btn {
+	padding: .6rem 2rem;
+	font-size: 1rem;
+	border-radius: 1.5rem
+}
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	font-weight: bold
+}
+
+/* Margin */
+.md-6 {
+	margin-bottom: 6rem
+}
+/* Start Info */
+.info {
+	margin-bottom: 50px;
+	h2 {
+		font-size: 2.2em;
+		margin-bottom: 25px;
+	}
+	p {
+		font-size: 1.1em;
+		line-height: 1.6;
+	}
+}
+/* End Global */
+
+/* --------------------------------------------------------------------
+	Start Menu Info
+-------------------------------------------------------------------- */
+.header-top {
+	padding-top: 20px;
+	.row {
+		max-height: 70px
+	}
+	.info {
+		position: relative;
+		color: $color-black-menu;
+		a {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			background-color: #1a9bdc;
+			border-radius: 50%;
+			color: #fff;
+			text-align: center;
+			&:hover {
+				color: #fff;
+			}
+			i {
+				font-size: 30px;
+				line-height: 50px;
+			}
+		}
+		h6 {
+			@include font($size: .97em, $weight: bold);
+			margin: 0 0 5px 60px;
+		}
+		p {
+			width: calc(100% - 60px);
+			margin: 0 0 0 60px;
+			font-size: .83em;
+		}
+	}
+	hr {
+		margin-bottom: 0
+	}
+}
+/* End Menu Info */
+
+/* --------------------------------------------------------------------
+	Start Navbar
+-------------------------------------------------------------------- */
+.navbar {
+	    padding: 15px 0 !important;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 1000;
+	.navbar-nav {
+		width: 100%;
+		.nav-item {
+			@include font($size: 1.3em);
+			a{
+				color: $color-black-nav !important;
+				&:hover {
+					color: $color-black-nav-active !important;
+				}
+			}
+			&:not(:last-child) {
+				margin-right: 10px
+			}
+		}
+		.active {
+			a {
+				color: $color-black-nav-active !important;
+			}
+		}
+		.two {
+			li {
+				display: inline-block
+			}
+		}
+	}
+}
+/* End Navbar */
+
+/* --------------------------------------------------------------------
+	Start Global
+-------------------------------------------------------------------- */
+header {
+	background: url(../image/header/header.jpg);
+	@extend %background;
+	padding: 185px 0;
+	max-height: 650px;
+	h1 {
+		font-size: 3.1em;
+		color: $color-black-header;
+		margin-bottom: 30px
+	}
+	p {
+		 font-size: 1.47em;
+		color: $color-black-header-p;
+		margin-bottom: 30px
+	}
+}
+/* End Global */
+
+/* --------------------------------------------------------------------
+	Start Card-Info
+-------------------------------------------------------------------- */
+.info {
+	.row {
+		margin: 0
+	}
+	.con {
+		padding: 0
+	}
+	.card-info {
+		padding: 50px 25px 30px;
+		h5 {
+			font-size: 1.5em;
+			margin: 20px 0
+		}
+		&.one {
+			background-color: $back-card-1
+		}
+		&.two {
+			background-color: $back-card-2
+		}
+		&.three {
+			background-color: $back-card-3
+		}
+		&.four {
+			background-color: $back-card-4
+		}
+	}
+}
+/* End Card-Info */
+
+/* --------------------------------------------------------------------
+	Start Content
+-------------------------------------------------------------------- */
+.content {
+	padding-top: 80px;
+	.info {
+		margin-bottom: 50px;
+		h2 {
+			color: $color-black
+		}
+		p {
+			padding: 0 90px
+		}
+	}
+	.content-info {
+		position: relative;
+		padding: 40px 0;
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%)
+		}
+		h3 {
+			width: calc(100% - 100px);
+			margin: 0 0 0 100px;
+			font-size: 2em;
+			color: $color-head
+		}
+	}
+	p {
+		font-size: 1.1em;
+		margin-bottom: 0;
+		line-height: 1.7;
+		color: $color-black-menu
+	}
+}
+/* End Content */
+
+/* --------------------------------------------------------------------
+	Start Counter-info
+-------------------------------------------------------------------- */
+.counter-info {
+	padding: 120px 0;
+	background: url(../image/counter/counter.png);
+	@extend %background;
+	background-position: center right;
+	background-blend-mode: multiply;
+	background-color: rgba($back-blue, .9);
+	img {
+		width: 90px;
+		height: 80px;
+	}
+	.info {
+		height: 199px;
+		padding-top: 25px;
+		h2 {
+			font-size: 3em;
+			margin-bottom: 0;
+			padding: 10px 0;
+			display: inline-block
+		}
+		span {
+			font-size: 3em
+		}
+		.hr {
+			width: 40%;
+			height: 5px;
+			margin: 15px auto;
+			background-color: #fff
+		}
+		p {
+			font-size: 1.3em
+		}
+	}
+}
+/* End Counter-info */
+
+/* --------------------------------------------------------------------
+	Start Works
+-------------------------------------------------------------------- */
+.works {
+	padding: 80px 0;
+	.info {
+		margin-bottom: 50px;
+		h2 {
+			color: $color-black
+		}
+		p {
+			color: $color-black-menu
+		}
+	}
+	.card {
+		border: 0;
+		border-radius: 0;
+		img {
+			height: 230px
+		}
+		.card-body {
+			h5 {
+				font-size: 1.3em;
+				margin: 10px 0 20px;
+				color: $color-head
+			}
+			a {
+				color: $back-blue;
+				font-weight: bold
+			}
+			p {
+				margin: 15px 0 0;
+				 line-height: 1.6;
+				color: $color-black-menu
+			}
+		}
+	}
+	button {
+		margin: 50px auto 0
+	}
+	.panel-default {
+		.panel-heading {
+			background-color: $color-gray;
+			&.active  {
+				background-color: $back-blue !important;
+				a {
+					color: #fff !important
+				}
+			}
+			a {
+				color: $color-black;
+				font-size: 1.1em;
+				&:hover {
+					text-decoration: none
+				}
+			}
+			i {
+				color: $color-blue;
+				font-size: 12px;
+				padding: 10px;
+				border-radius: 50%;
+				background-color: #fff;
+				margin-right: 10px
+			}
+		}
+		.panel-body {
+			color: $color-black-menu
+		}
+	}
+}
+/* End Works */
+
+/* --------------------------------------------------------------------
+	Start Gallery
+-------------------------------------------------------------------- */
+.gallery {
+	padding: 90px 0;
+	background: url(../image/gallery/gallery.png);
+	@extend %background;
+	background-blend-mode: multiply;
+	background-color: $color-green;
+	.info {
+		p {
+			padding: 0 90px
+		}
+	}
+	img {
+		width: 100%;
+		height: 250px
+	}
+}
+/* End Gallery */
+
+/* --------------------------------------------------------------------
+	Start Team
+-------------------------------------------------------------------- */
+.team {
+	padding: 120px 0 100px;
+	.info {
+		margin-bottom: 100px;
+		h2 {
+			color: $color-black
+		}
+		p {
+			color: $color-black-menu
+		}
+	}
+	.img {
+		position: relative;
+		width: 260px;
+		height: 260px;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			&.one {
+				top: -9%;
+				left: -6%
+			}
+			&.two {
+				top: -10%;
+				left: 0%
+			}
+			&.three {
+				top: -7%;
+				left: -6%
+			}
+			&.four {
+				top: -10%;
+				left: -2%
+			}
+		}	
+	}
+	.team-info {
+		color: $color-head;
+		h5 {
+			font-size: 1.8em;
+			margin: 25px 0 15px
+		}
+		p {
+			font-size: 1.1em
+		}
+		ul li {
+			display: inline-block;
+			&:not(:last-child) {
+				margin-right: 10px
+			}
+			i {
+				font-size: 1.5em;
+				color: $back-blue
+			}
+		}
+	}
+}
+/* End Team */
+
+/* --------------------------------------------------------------------
+	Start Offer
+-------------------------------------------------------------------- */
+.offer {
+	padding: 80px 0;
+	background-color: $color-gray;
+	h2 {
+		font-size: 2em;
+		color: $color-black
+	}
+}
+/* End Offer */
+
+/* --------------------------------------------------------------------
+	Start Contact Us
+-------------------------------------------------------------------- */
+.contact-us {
+	padding: 120px 0;
+	background-color: $back-contact-us;
+	color: rgba(#fff, .7);
+	.contact-info {
+		position: relative;
+		padding: 40px 0 10px;
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%)
+		}
+		p {
+			width: calc(100% - 60px);
+			margin: 0 0 0 60px
+		}
+	}
+	.link {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 15px
+			}
+			a {
+				font-size: 1em;
+				color: rgba(#fff, .7);
+				text-decoration: none;
+				i {
+					color: $color-blue;
+					margin-right: 20px
+				}
+			}
+		}
+	}
+	form {
+		input[type= "text"],
+		textarea {
+			border: 0;
+			border-bottom: 1px solid #fff;
+			background-color: transparent;
+			margin-bottom: 20px;
+			&.form-control {
+				padding: .5rem .5rem;
+				border-radius: 0;
+				&:focus {
+					color: #fff;
+					box-shadow: none
+				}
+			}
+		}
+		textarea {
+			resize: none;
+			height: 150px;
+			&:focus {
+				&:focus {
+					background-color:  transparent;
+					border-color: transparent
+				}
+			}
+		}
+		.btn {
+			padding: .38rem 2.1rem;
+			font-size: 1.1rem;
+			border-radius: 1.5rem;
+		}
+	}
+	.social-icon {
+		li {
+			display: inline-block;
+			margin-right: 15px;
+			i {
+				font-size: 2em;
+				color: #fff;
+				transition: .5s;
+				&:hover {
+					color: $back-blue
+				}
+			}
+		}
+	}
+}
+/* End Contact Us */
+/* --------------------------------------------------------------------
+	Start Footer
+-------------------------------------------------------------------- */
+footer {
+	padding: 50px 0;
+	background-color: $back-footer;
+	p {
+		color: $color-footer-p
+	}
+}
+/* End Footer */
+
+
+/* --------------------------------------------------------------------
+	Start Group
+-------------------------------------------------------------------- */
+%background {
+	background-attachment: fixed;
+	background-size: cover;
+}
+/* End Group */
