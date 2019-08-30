@@ -446,6 +446,7 @@ header p {
 .contact-us {
   background-color: #171717;
   color: rgba(255, 255, 255, 0.7);
+  padding: 50px 0
 }
 .contact-us .contact-info {
   position: relative;
@@ -519,7 +520,7 @@ header p {
 	Start Footer
 -------------------------------------------------------------------- */
 footer {
-  padding: 40px 0;
+  padding: 50px 0;
   background-color: #1a1a1a;
 }
 footer p {
